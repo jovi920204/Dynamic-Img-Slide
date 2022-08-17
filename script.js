@@ -1,12 +1,19 @@
 var URL = "/pics/";
 var id = 100000; // default
 
+function display(){
+  var displayID = document.getElementById("displayID");
+  var text = "ID:"+String(id);
+  displayID.innerHTML = text;
+}
+
 function prevImg(){
   if(id > 100000){
     id--;
   }
   const Img = document.getElementById("image");
   Img.src = URL+String(id)+".jpg";
+  display();
 };
 function nextImg(){
   if(id <= 100020){
@@ -14,6 +21,7 @@ function nextImg(){
   }
   const Img = document.getElementById("image");
   Img.src = URL+String(id)+".jpg";
+  display();
 };
 
 function search(){
@@ -21,4 +29,11 @@ function search(){
   const Img = document.getElementById("image");
   id = parseInt(text);
   Img.src = URL+String(id)+".jpg";
+  display();
+}
+
+function init(){
+  const Img = document.getElementById("image");
+  Img.src = URL+String(id)+".jpg";
+  display();
 }

@@ -8,35 +8,38 @@
     <script src="script.js"></script>
     <title>Dynamic Img Slide</title>
   </head>
-  <body>
-    <header>Dynamic Images Slide</header>
+  <body onload="init();">
+    <header class="text">Dynamic Images Slide</header>
     <div class="container">
+      <h1 id="displayID" class="text">ID:</h1>
       <img id="image" src="/pics/100000.jpg" />
     </div>
-    <input
-      onclick="prevImg();"
-      type="image"
-      src="/imgs/prev.png"
-      class="prev pageControl"
-      id="prev"
-    />
-    <input
-      onclick="nextImg();"
-      type="image"
-      src="/imgs/next.png"
-      class="next pageControl"
-      id="next"
-    />
-    <div class="search">
-      <input type="text" class="searchBar" id="searchBar" />
-      <button
-        onclick="search();"
-        type="submit"
-        class="searchButtom"
-        id="searchButtom"
-      >
-        Search
-      </button>
+    <div class="controler">
+      <input
+        onclick="prevImg();"
+        type="image"
+        src="/imgs/prev.png"
+        class="prev pageControl"
+        id="prev"
+      />
+      <input
+        onclick="nextImg();"
+        type="image"
+        src="/imgs/next.png"
+        class="next pageControl"
+        id="next"
+      />
+      <div class="search">
+        <input type="text" class="searchBar" id="searchBar" />
+        <button
+          onclick="search();"
+          type="submit"
+          class="searchButtom"
+          id="searchButtom"
+        >
+          Search
+        </button>
+      </div>
     </div>
   </body>
 </html>
